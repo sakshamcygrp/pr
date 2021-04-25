@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body id="body" onload="CheckLogin()">
+<div class="container" id="first">
+<img src="./images/logo.png">
+RESULT DATA
+</div>
+<br/><br/><br/><br/><br/>
+<div class="container" id="second">
+    <button type="button" class="btn btn-primary" onclick="FetchData()">SHOW DATA</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button type="button" class="btn btn-warning"   data-toggle="modal" data-target="#exampleModal">ADD NEW RECORD</button>
+</div>
+<div class="container">
+<div id="div1"></div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Enter Details</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+             <label for="name">Name</label><br/> <input type="text" id="name"><br/><br/>
+             <label for="eng">English</label> <br/><input type="number" id="eng"><br/><br/>
+             <label for="hin">Hindi</label> <br/><input type="number" id="hin"><br/><br/>
+             <label for="spa">Spanish</label><br/> <input type="number" id="spa"><br/><br/>
+             <label for="mat">Mathematics</label> <br/><input type="number" id="mat"><br/><br/>
+             <label for="sci">Science</label><br/> <input type="number" id="sci"><br/><br/>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="add()">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2-->
+  <div class="modal fade" id="Modal2" tabindex="-1" role="dialog" aria-labelledby="Modal2Label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="Modal2Label">Enter Details To Update</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+              <div id="hide"></div>
+             <label for="name2">Name</label><br/> <input type="text" id="name2"><br/><br/>
+             <label for="eng2">English</label> <br/><input type="number" id="eng2"><br/><br/>
+             <label for="hin2">Hindi</label> <br/><input type="number" id="hin2"><br/><br/>
+             <label for="spa2">Spanish</label> <br/><input type="number" id="spa2"><br/><br/>
+             <label for="mat2">Mathematics</label> <br/><input type="number" id="mat2"><br/><br/>
+             <label for="sci2">Science</label> <br/><input type="number" id="sci2"><br/><br/>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="updateUser()">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br><br><br>
+  <div class="container"  style="text-align: center;">
+      <button type="button" class="btn btn-danger" onclick="logout()">LOGOUT</button>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
